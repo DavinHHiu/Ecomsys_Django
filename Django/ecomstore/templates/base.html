@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{%if title_page %}{{ page_title }} - {% endif %} {{ site_name }}{% endblock %}</title>
+    <meta name="keywords" content="{{ meta_keywords }}" />
+    <meta name="description" content="{{ meta_description }}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}" />
+</head>
+<body>
+    {% block site_wrapper %}{% endblock %}
+</body>
+</html>
